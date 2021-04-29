@@ -3,7 +3,9 @@ from m5ui import *
 from uiflow import *
 import time
 import hat
-import hat
+import BlynkLib
+
+from numbers import Number
 
 setScreenColor(0x111111)
 
@@ -11,16 +13,9 @@ hat_pir3 = hat.get(hat.PIR)
 
 VC = None
 
-
-
-from numbers import Number
-
-
-
-
 setScreenColor(0xff0000)
-import BlynkLib
-BLYNK_AUTH = 'cZzy_x2WrcU_HXNCkbR2M_UPzcT-YxPw'
+
+BLYNK_AUTH = '<Your blynk API crendetial>'
 blynk = BlynkLib.Blynk(BLYNK_AUTH)
 
 @timerSch.event('__blynk_timer')
